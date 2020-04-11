@@ -7,20 +7,30 @@ import NavBar from "./components/NavBar";
 import 'normalize.css/normalize.css';
 import './styles/styles.css';
 
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 const Layout = (props) => {
   return (
+    <BrowserRouter>
+      <div>
+        <NavBar />
+        <Header />
+        <Switch>
+          <Route path="/" component={HomePage} exact={true}/>
+        </Switch>
+      </div>
+    </BrowserRouter>
+  )
+}
+
+const HomePage = (props) => {
+  return (
     <div>
-      <NavBar />
-      <Header />
       <TopTours />
       <AboutUs />
       <Footer />
     </div>
   )
-}
-
-const App = () => {
-  return <div>Hello React,Webpack 4 & Babel 7!</div>;
 };
 
 const Header = () => {
