@@ -13,6 +13,8 @@ const Layout = (props) => {
       <NavBar />
       <Header />
       <TopTours />
+      <AboutUs />
+      <Footer />
     </div>
   )
 }
@@ -38,20 +40,49 @@ const TopTours = () => {
     <div className="row">
       <div className="col-md-6">
         <div className="row">
-          <div className="toptours-image col-md-12">
-            hello1
+          <div className="toptours-image col-md-12 col-center top-tours-text">
+            Adventure
           </div>
         </div>
         <div className="row">
-          <div className="toptours-image-2 col-md-12">
-            hello2
+          <div className="toptours-image-2 col-md-12 col-center top-tours-text">
+            Culture
           </div>
         </div>
       </div>
-      <div className="toptours-image-3 col-md-6">
-        hello3
+      <div className="toptours-image-3 col-md-6 col-center top-tours-text">
+        Sports
       </div>
     </div>
+  )
+};
+
+const AboutUs = () => {
+  return (
+    <div className="row">
+      <div className="col-md-4 about-us-image-1 col-center">
+        <i className="fas fa-users feature-icons"></i>
+        <p className="feature-text">Our People</p>
+      </div>
+      <div className="col-md-4 about-us-image-2 col-center">
+        <i className="fas fa-handshake feature-icons"></i>
+        <p className="feature-text">Our Commitment</p>
+      </div>
+      <div className="col-md-4 about-us-image-3 col-center">
+        <i className="fas fa-globe feature-icons"></i>
+        <p className="feature-text">Our Story</p>
+      </div>
+    </div>
+  )
+};
+
+const Footer = () => {
+  return (
+    <footer className="footer mt-auto py-3">
+      <div className="container">
+        <span className="text-muted">Place sticky footer content here.</span>
+      </div>
+    </footer>
   )
 };
 

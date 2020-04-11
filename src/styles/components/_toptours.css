@@ -20,6 +20,11 @@
     background-color: green;
 }
 
+.top-tours-text {
+    font-size: 5rem;
+    color: white;
+}
+
 /* Media Query Breakpoints */
 @media screen and (min-width: 768px) {
     .toptours-image-3 {
