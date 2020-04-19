@@ -1,0 +1,32 @@
+.navbar {
+    min-height: 60px;
+  }
+  
+  .navbar-brand {
+    padding: 0 15px;
+    height: 60px;
+    line-height: 60px;
+  }
+  
+  .navbar-toggle {
+    /* (80px - button height 34px) / 2 = 23px */
+    margin-top: 13px;
+    padding: 12px 10px !important;
+  }
+  
+  @media (min-width: 768px) {
+    .navbar-nav > li > a {
+      /* (80px - line-height of 27px) / 2 = 26.5px */
+      padding-top: 16.5px;
+      padding-bottom: 16.5px;
+      line-height: 27px;
+    }
+  }
+
+.nav-text {
+    font-size: 2rem;
+}
+
+.nav-subtext {
+    font-size: 1.5rem;
+}

@@ -3,11 +3,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import NavBar from "./components/NavBar";
+import HomePage from "./components/HomePage";
+import DayTrips from "./components/DayTrips";
+import NotFoundPage from "./components/NotFoundPage";
 
 import 'normalize.css/normalize.css';
 import './styles/styles.css';
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 
 const Layout = (props) => {
   return (
@@ -17,16 +20,35 @@ const Layout = (props) => {
         <Header />
         <Switch>
           <Route path="/" component={HomePage} exact={true}/>
+          <Route path="/dayTrips" component={DayTrips} />
+          <Route component={NotFoundPage} />
         </Switch>
       </div>
     </BrowserRouter>
   )
 }
 
+const DayTrips = (props) => {
+  return (
+    <div>
+      <Footer />
+    </div>
+  )
+}
+
+const NotFoundPage = (props) => {
+  return (
+    <div>
+      Oh no, not found! -
+      <Link to="/">Go Home</Link>
+    </div>
+  )
+}
+
 const HomePage = (props) => {
   return (
     <div>
-      <TopTours />
+      <AllTrips />
       <AboutUs />
       <Footer />
     </div>
@@ -45,7 +67,7 @@ const Header = () => {
   )
 };
 
-const TopTours = () => {
+const AllTrips = () => {
   return (
     <div className="row">
       <div className="col-md-6">
@@ -61,7 +83,7 @@ const TopTours = () => {
         </div>
       </div>
       <div className="toptours-image-3 col-md-6 col-center top-tours-text">
-        Sports
+        Day Trips
       </div>
     </div>
   )

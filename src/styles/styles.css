@@ -1,5 +1,6 @@
 @import './base/_base.css';
 
-@import './components/_header.css';
-@import './components/_toptours.css';
 @import './components/_about-us.css';
+@import './components/_header.css';
+@import './components/_navbar.css';
+@import './components/_toptours.css';
